@@ -148,7 +148,6 @@ with graph.as_default():
 num_steps = 1000001
 
 with tf.Session(graph=graph) as session:
-	# We must initialize all variables before we use them.
 	init.run()
 	print("Initialized")
 	session.run(embedding_init, feed_dict={embedding_placeholder: embedding(vocab_size, embedding_size)})
